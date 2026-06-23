@@ -1,8 +1,8 @@
 ---
 chunk_id: skills_deep_core
-tags: [skills, technologies, depth, stack, programming, databases, backend, frontend, AI, DevOps]
-retrieval_triggers: ["Garv's skills", "what technologies does Garv know", "Garv's tech stack", "how well does Garv know", "Garv's programming languages", "backend skills", "database experience", "AI experience"]
-summary: "Honest depth assessment of Garv Jain's technical skills grounded in project evidence — languages, backend, databases, frontend, AI/ML, DevOps, and current gaps."
+tags: [skills, technologies, depth, stack, programming, databases, backend, frontend, AI, DevOps, Python, FastAPI, PostgreSQL]
+retrieval_triggers: ["Garv's skills", "what technologies does Garv know", "Garv's tech stack", "how well does Garv know", "Garv's programming languages", "backend skills", "database experience", "AI experience", "FastAPI expertise", "PostgreSQL experience", "RAG systems"]
+summary: "An honest depth assessment of Garv Jain's technical skills, covering languages, backend, databases, frontend, AI, DevOps, and the gaps where he is still developing stronger practical experience."
 ---
 
 # Skills — Depth Assessment

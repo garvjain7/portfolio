@@ -1,8 +1,8 @@
 ---
 chunk_id: lessons_learned_core
-tags: [lessons, mistakes, growth, reflection, learning, improvement]
-retrieval_triggers: ["Garv's mistakes", "what has Garv learned", "Garv's failures", "what would Garv do differently", "lessons from projects", "Garv's growth", "what changed in how Garv builds"]
-summary: "Three honest engineering mistakes Garv Jain has made across projects — premature abstraction, scope expansion before core completion, and over-relying on upfront mental models — and what specifically changed after each."
+tags: [lessons, mistakes, growth, reflection, learning, improvement, retrospection]
+retrieval_triggers: ["Garv's lessons", "what has Garv learned", "Garv's failures", "what would Garv do differently", "lessons from projects", "engineering growth", "Garv's mistakes", "project retrospectives", "learning from mistakes"]
+summary: "Key engineering lessons Garv Jain learned from project work, including how to avoid premature abstraction, manage scope, and build with evidence-based simplicity."
 ---
 
 # Lessons Learned

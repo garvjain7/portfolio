@@ -1,8 +1,8 @@
 ---
 chunk_id: system_design_approach_core
-tags: [system design, architecture, caching, rate limiting, queues, schema, authentication, performance]
-retrieval_triggers: ["Garv's system design", "how does Garv design systems", "caching decisions", "rate limiting", "job queues", "schema design process", "authentication approach", "distributed systems", "performance optimization"]
-summary: "Garv Jain's practical system design approach — what he has implemented across projects, how he makes architectural decisions, and where his depth is theoretical versus applied."
+tags: [system-design, architecture, caching, rate-limiting, queues, schema, authentication, performance, distributed-systems, security]
+retrieval_triggers: ["Garv's system design", "how does Garv design systems", "caching decisions", "rate limiting", "job queues", "schema design process", "authentication approach", "distributed systems", "performance optimization", "security architecture"]
+summary: "A practical description of how Garv Jain approaches system design, including caching, queues, schema design, authentication, and the tradeoffs he applies across real projects."
 ---
 
 # System Design Approach

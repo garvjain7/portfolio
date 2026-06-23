@@ -1,49 +1,43 @@
 """
-embeddings.py — Generates OpenAI embeddings for a list of text strings.
+embeddings.py — Local sentence-transformer embeddings (no API calls).
+
 Used at startup to embed all knowledge base chunks, and at query time
 to embed the user's question before FAISS search.
+
+NOTE: Embeddings use local sentence-transformers model, NOT OpenAI.
+OpenAI is used only for the LLM chat part (gpt-4o).
 """
 
-from openai import OpenAI
-from core.config import settings
+from sentence_transformers import SentenceTransformer
 
-_client = OpenAI(api_key=settings.openai_api_key)
+# Use a lightweight, fast local embedding model
+# This runs locally with no API calls or credentials needed
+_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 def embed_texts(texts: list[str]) -> list[list[float]]:
     """
-    Embed a batch of texts using the configured OpenAI embedding model.
+    Embed a batch of texts using local sentence-transformers.
     Returns a list of float vectors, one per input text.
-
-    Uses a single batched API call for efficiency.
-    OpenAI text-embedding-3-small supports up to 2048 inputs per request.
+    
+    No API calls or credentials needed — runs entirely locally.
     """
     if not texts:
         return []
 
-    # OpenAI embedding API: max 2048 inputs per call
-    BATCH_SIZE = 512
-    all_embeddings: list[list[float]] = []
-
-    for i in range(0, len(texts), BATCH_SIZE):
-        batch = texts[i : i + BATCH_SIZE]
-        response = _client.embeddings.create(
-            model=settings.openai_embedding_model,
-            input=batch,
-        )
-        batch_embeddings = [item.embedding for item in response.data]
-        all_embeddings.extend(batch_embeddings)
-
-    return all_embeddings
+    # Encode all texts at once (sentence-transformers handles batching internally)
+    embeddings = _model.encode(texts, convert_to_numpy=True)
+    
+    # Convert numpy arrays to Python lists
+    return [emb.tolist() for emb in embeddings]
 
 
 def embed_query(query: str) -> list[float]:
     """
-    Embed a single query string. Used at request time for FAISS search.
+    Embed a single query string using local sentence-transformers.
     Returns a single float vector.
+    
+    No API calls or credentials needed.
     """
-    response = _client.embeddings.create(
-        model=settings.openai_embedding_model,
-        input=[query],
-    )
-    return response.data[0].embedding
+    embedding = _model.encode([query], convert_to_numpy=True)[0]
+    return embedding.tolist()

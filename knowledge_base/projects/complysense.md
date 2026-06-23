@@ -1,8 +1,8 @@
 ---
 chunk_id: project_complysense
-tags: [projects, complysense, grc, compliance, saas, rbac, ai-roles, technical-lead, risk-management]
-retrieval_triggers: ["ComplySense", "GRC platform", "compliance SaaS", "Garv's internship project", "role-based AI design", "CERT-In", "DPDP compliance", "Garv's most complex project", "technical lead role", "university compliance platform"]
-summary: "ComplySense is an AI-enabled risk and compliance platform for Indian universities, technical-led by Garv Jain. It brings security and regulatory compliance work onto a single platform with role-based access and AI capabilities tailored to each role's daily responsibilities."
+tags: [projects, complysense, grc, compliance, saas, rbac, ai, university, risk-management, DPDP, ISO, NIST]
+retrieval_triggers: ["ComplySense", "GRC platform", "compliance SaaS", "university compliance", "Indian regulatory compliance", "DPDP Act", "ISO 27001", "NIST CSF", "RBAC platform", "technical lead project"]
+summary: "ComplySense is an AI-enabled GRC and compliance platform for Indian universities, led technically by Garv Jain. It maps regulatory frameworks into a role-based SaaS product with AI workflows and enterprise compliance support."
 ---
 
 # ComplySense

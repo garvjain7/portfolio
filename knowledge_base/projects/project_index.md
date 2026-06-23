@@ -1,8 +1,8 @@
 ---
 chunk_id: project_index
-tags: [projects, overview, index, navigation, cross-project, portfolio-summary]
-retrieval_triggers: ["what projects has Garv built", "list Garv's projects", "portfolio overview", "all of Garv's projects", "what has Garv worked on", "compare ScanVista and CodeAlive", "which projects use AI", "Garv's internship projects", "Garv's project history", "what tech stack does Garv use"]
-summary: "Cross-project navigation layer — lists everything Garv has built, groups projects by technology and AI design approach, and connects projects to the internships that produced them."
+tags: [projects, overview, index, navigation, cross-project, portfolio-summary, project-list]
+retrieval_triggers: ["what projects has Garv built", "list Garv's projects", "portfolio overview", "project index", "project navigation", "compare projects", "which projects use AI", "internship projects", "project summary"]
+summary: "Cross-project navigation for Garv Jain's portfolio — lists his projects, groups them by technology and domain, and highlights how each connects to his internship and AI work."
 ---
 
 # Project Index

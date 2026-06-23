@@ -1,8 +1,8 @@
 ---
 chunk_id: engineering_narrative_core
-tags: [narrative, journey, growth, background, story, learning, development]
-retrieval_triggers: ["how did Garv get into engineering", "Garv's background story", "how did Garv learn", "what shaped Garv", "Garv's journey", "how did Garv get into backend", "how did Garv get into AI", "what drove Garv's interests"]
-summary: "Cause-and-effect account of how Garv Jain developed as an engineer — from basic web development through systems thinking, and how backend, data, and AI interests converged into a unified engineering perspective."
+tags: [narrative, journey, growth, background, story, learning, development, systems-thinking, project-based]
+retrieval_triggers: ["how did Garv get into engineering", "Garv's background story", "how did Garv learn", "what shaped Garv", "Garv's journey", "how did Garv get into backend", "how did Garv get into AI", "what drove Garv's interests", "engineering narrative", "project learning story"]
+summary: "A narrative of how Garv Jain learned engineering through projects, shifted from tutorials to systems thinking, and built backend, data, and AI skills through real product challenges."
 ---
 
 # Engineering Narrative

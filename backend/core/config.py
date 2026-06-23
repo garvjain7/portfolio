@@ -11,12 +11,16 @@ class Settings(BaseSettings):
 
     # OpenAI
     openai_api_key: str
-    openai_embedding_model: str = "text-embedding-3-small"
     openai_chat_model: str = "gpt-4o"
+    # Note: Embeddings now use local sentence-transformers (no OpenAI API needed)
 
     # RAG
     knowledge_base_dir: Path = Path(__file__).parent.parent.parent / "knowledge_base"
     top_k_chunks: int = 5
+    top_k_files: int = 6
+    routing_threshold: float = 0.25
+    min_routed_files: int = 2
+    chunk_cache_ttl: int = 3600
 
     # CORS
     frontend_url: str = "http://localhost:3000"

@@ -1,8 +1,8 @@
 ---
 chunk_id: other_projects_basic
-tags: [projects, small-projects, experiments, games, computer-graphics, browser-extension, cli-tools, web3, hackathon]
-retrieval_triggers: ["small projects Garv", "side projects list", "Elastic Strings webcam instrument", "pygame games Garv", "solar system simulation OpenGL", "AccessFlow accessibility extension", "KaraVerse terminal lyrics tool", "ChainLit web3 onboarding hackathon", "system design study notes"]
-summary: "Compressed inventory of smaller-scope projects: a browser-based webcam instrument, two pygame graphics experiments, a set of system design study notes, a browser accessibility extension, a terminal lyrics tool, and a web3 onboarding hackathon project."
+tags: [projects, basic, small-projects, experiments, games, browser-extension, cli-tools, web3, mini-projects]
+retrieval_triggers: ["basic projects Garv", "side projects", "small projects", "web games", "browser extension", "command line tool", "web3 onboarding", "mini hackathon project"]
+summary: "A concise inventory of smaller personal projects by Garv Jain, including browser experiments, games, CLI tools, web utilities, and hackathon prototypes."
 ---
 
 # Smaller Projects and Experiments

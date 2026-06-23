@@ -1,8 +1,8 @@
 ---
 chunk_id: education_core
-tags: [education, academic, background, qualifications]
-retrieval_triggers: ["Garv's education", "where did Garv study", "Garv's degree", "academic background", "college", "qualifications", "GATE", "research paper"]
-summary: "Garv Jain's educational background — B.Tech CS at Poornima Institute, certifications, GATE, research publication, and how formal education shaped his engineering development."
+tags: [education, academic, background, qualifications, GATE, research, BTech, Poornima]
+retrieval_triggers: ["Garv's education", "where did Garv study", "Garv's degree", "academic background", "B.Tech CS", "Poornima Institute", "GATE 2026", "research publication", "academic qualifications", "college background"]
+summary: "Garv Jain's formal education — B.Tech in Computer Science at Poornima Institute, GATE qualification, research publication, and how his academic background complements his practical engineering work."
 ---
 
 # Education

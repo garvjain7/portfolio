@@ -1,8 +1,8 @@
 ---
 chunk_id: experience_core
-tags: [experience, internships, work, leadership, team, projects]
-retrieval_triggers: ["Garv's experience", "Garv's internships", "work experience", "has Garv worked in a team", "Garv's leadership", "SparkIIT", "STPI", "professional experience"]
-summary: "Garv Jain's professional experience across three internships — SparkIIT (backend integration, technical lead), STPI first (solo full-stack, ApnaEV), STPI second (technical lead, ComplySense, ongoing)."
+tags: [experience, internships, work, leadership, team, projects, SparkIIT, STPI]
+retrieval_triggers: ["Garv's experience", "Garv's internships", "professional experience", "SparkIIT", "STPI Jaipur", "work experience", "technical lead experience", "backend internship", "internship projects", "team leadership"]
+summary: "Garv Jain's internship and professional experience, including SparkIIT backend work, STPI Jaipur solo work on ApnaEV, and ongoing technical lead responsibilities on ComplySense."
 ---
 
 # Experience

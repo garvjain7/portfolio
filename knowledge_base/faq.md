@@ -1,8 +1,8 @@
 ---
 chunk_id: faq_core
-tags: [faq, questions, answers, recruiter, visitor, quick-reference, summary]
-retrieval_triggers: ["frequently asked questions", "quick questions about Garv", "recruiter questions", "who is Garv Jain", "tell me about Garv", "Garv's background", "what does Garv do", "is Garv available", "contact Garv", "hire Garv", "Garv's resume", "Garv's LinkedIn", "can Garv do frontend", "does Garv know machine learning", "what is Garv's GPA", "where is Garv from", "Garv's location", "is Garv a student", "Garv's graduation year", "Garv's availability"]
-summary: "Concise answers to the most common questions a recruiter, hiring manager, or visitor would ask about Garv Jain — covering identity, background, projects, skills, experience, certifications, career goals, and availability."
+tags: [faq, questions, answers, recruiter, visitor, quick-reference, summary, contact, availability]
+retrieval_triggers: ["frequently asked questions", "FAQ about Garv", "recruiter questions", "who is Garv Jain", "tell me about Garv", "what does Garv do", "is Garv available", "contact Garv", "hire Garv", "Garv's resume", "Garv's LinkedIn", "can Garv do frontend", "does Garv know machine learning", "what is Garv's GPA", "where is Garv from", "Garv's location", "is Garv a student", "Garv's graduation year", "Garv's availability"]
+summary: "Frequently asked questions and concise answers about Garv Jain's background, skills, projects, certifications, career goals, and availability."
 ---
 
 # FAQ — Frequently Asked Questions

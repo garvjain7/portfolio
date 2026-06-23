@@ -1,8 +1,8 @@
 ---
 chunk_id: technical_philosophy_core
-tags: [philosophy, engineering, approach, principles, design, architecture]
-retrieval_triggers: ["Garv's engineering philosophy", "how does Garv approach design", "Garv's principles", "over-engineering", "architectural decisions", "Garv's beliefs about software", "design philosophy"]
-summary: "Garv Jain's technical philosophy — how he identifies over-engineering, handles architectural uncertainty, and the principles that have consistently held up across his projects."
+tags: [philosophy, engineering, approach, principles, design, architecture, decision-making]
+retrieval_triggers: ["Garv's engineering philosophy", "how does Garv approach design", "Garv's principles", "over-engineering", "architectural decisions", "Garv's beliefs about software", "design philosophy", "technical philosophy"]
+summary: "Garv Jain's technical philosophy — the principles he uses to avoid over-engineering, handle uncertainty, and make architectural decisions grounded in real problems."
 ---
 
 # Technical Philosophy

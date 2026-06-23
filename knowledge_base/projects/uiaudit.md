@@ -1,8 +1,8 @@
 ---
 chunk_id: project_uiaudit
-tags: [projects, uiaudit, ai-agent, playwright, ui-evaluation, nielsen-heuristics, fastapi, postgresql, browser-automation, vision-models, experimental-agent]
-retrieval_triggers: ["UIAudit", "UI audit agent", "website usability testing AI", "Nielsen heuristic evaluator", "agent-based UI analysis", "browser automation UI evaluation", "Garv UI audit project"]
-summary: "UIAudit is an experimental agent-based system that evaluates public websites using browser automation and AI reasoning against Nielsen’s 10 usability heuristics, generating structured scores, insights, and improvement suggestions."
+tags: [projects, uiaudit, ai-agent, playwright, ui-evaluation, nielsen, usability, browser-automation, vision-models]
+retrieval_triggers: ["UIAudit", "UI audit agent", "website usability testing", "Nielsen heuristics", "UX evaluation AI", "browser automation UI analysis", "UI review system", "usability scoring"]
+summary: "UIAudit is an experimental AI-driven usability evaluation system that analyzes websites with browser automation, heuristic scoring, and structured improvement suggestions."
 ---
 
 # UIAudit

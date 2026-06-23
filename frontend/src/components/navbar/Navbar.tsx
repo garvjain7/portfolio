@@ -9,6 +9,7 @@ export function Navbar() {
   const [pinned, setPinned] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const { scrollTo, scrollToTop } = useSectionNav()
+  const welcomeDismissed = useUIStore((s) => s.welcomeDismissed)
   const openAssistant = useUIStore((s) => s.openAssistant)
 
   useEffect(() => {
@@ -54,8 +55,8 @@ export function Navbar() {
         backdropFilter: pinned ? 'blur(20px)' : 'none',
         WebkitBackdropFilter: pinned ? 'blur(20px)' : 'none',
         borderBottom: pinned ? '1px solid var(--border)' : '1px solid transparent',
-        opacity: pinned ? 1 : 0,
-        pointerEvents: pinned ? 'all' : 'none',
+        opacity: welcomeDismissed ? 1 : 0,
+        pointerEvents: welcomeDismissed ? 'all' : 'none',
       }}
     >
       <div

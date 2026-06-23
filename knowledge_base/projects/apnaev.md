@@ -1,8 +1,8 @@
 ---
 chunk_id: project_apnaev
-tags: [projects, apnaev, leaflet, maps, geospatial, ev, solo-project, internship]
-retrieval_triggers: ["ApnaEV", "EV charging station app", "Leaflet project", "geospatial project", "Garv's first solo project", "mapping application", "STPI internship project", "location-based app"]
-summary: "ApnaEV is an EV charging station discovery platform for Jaipur, built solo by Garv Jain over 45 days during his first STPI internship — his first complete end-to-end product, built around an interactive Leaflet map with a dark utilitarian UI."
+tags: [projects, apnaev, leaflet, maps, geospatial, ev, solo-project, internship, STPI]
+retrieval_triggers: ["ApnaEV", "EV charging station app", "charging station finder", "Jaipur EV app", "Leaflet map project", "location-based app", "geospatial app", "electric vehicle app", "STPI internship project"]
+summary: "ApnaEV is an EV charging station discovery platform for Jaipur, built solo by Garv Jain during his first STPI internship. It combines Leaflet mapping, geospatial routing, and a dark utilitarian UI for electric vehicle users."
 ---
 
 # ApnaEV

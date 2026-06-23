@@ -1,8 +1,8 @@
 ---
 chunk_id: career_goals_core
-tags: [career, goals, roles, ambitions, future, targets]
-retrieval_triggers: ["Garv's career goals", "what does Garv want to do", "Garv's target role", "where is Garv headed", "Garv's ambitions", "what kind of job", "Garv after graduation"]
-summary: "Garv Jain's career direction — target roles, preferred company types, problem domains he wants to work in, and what he is actively building toward."
+tags: [career, goals, roles, ambitions, future, targets, backend, ai, data, engineering]
+retrieval_triggers: ["Garv's career goals", "career goals", "target roles", "backend engineering role", "AI engineering role", "data engineering role", "what kind of job Garv wants", "where is Garv headed", "Garv's ambitions", "what does Garv want to do after graduation", "preferred company type", "future career direction"]
+summary: "Garv Jain's career direction — his preferred roles, the types of companies and problems he wants to work on, and the long-term engineering trajectory he is building toward."
 ---
 
 # Career Goals

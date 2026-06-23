@@ -6,6 +6,10 @@ interface UIStore {
   welcomeDismissed: boolean
   dismissWelcome: () => void
 
+  // Portal animation
+  portalOpened: boolean
+  setPortalOpened: (opened: boolean) => void
+
   // Sound
   soundEnabled: boolean
   toggleSound: () => void
@@ -43,7 +47,10 @@ export const useUIStore = create<UIStore>((set) => ({
   welcomeDismissed: false,
   dismissWelcome: () => set({ welcomeDismissed: true }),
 
-  soundEnabled: false,
+  portalOpened: false,
+  setPortalOpened: (opened: boolean) => set({ portalOpened: opened }),
+
+  soundEnabled: true,
   toggleSound: () => set((s: UIStore) => ({ soundEnabled: !s.soundEnabled })),
 
   assistantOpen: false,

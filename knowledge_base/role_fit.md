@@ -1,8 +1,8 @@
 ---
 chunk_id: role_fit_core
-tags: [role fit, career, strengths, backend, AI, data, team lead, frontend]
-retrieval_triggers: ["what role is Garv best suited for", "is Garv a good fit", "Garv as backend engineer", "Garv as AI engineer", "Garv as technical lead", "what kind of engineer is Garv", "should I hire Garv for", "Garv's strongest area"]
-summary: "Evidence-based assessment of which roles Garv Jain is best suited for, which roles are a partial fit, and which are not aligned — grounded in project history and demonstrated capabilities."
+tags: [role-fit, career, strengths, backend, AI, data, team-lead, frontend, fit]
+retrieval_triggers: ["what role is Garv best suited for", "is Garv a good fit", "Garv as backend engineer", "Garv as AI engineer", "Garv as data engineer", "Garv as technical lead", "what kind of engineer is Garv", "should I hire Garv for", "Garv's strongest area", "role fit"]
+summary: "An evidence-based assessment of the roles that fit Garv Jain best — backend, AI/data, technical lead — and the roles that are only a partial fit or not aligned."
 ---
 
 # Role Fit

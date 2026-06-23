@@ -1,8 +1,8 @@
 ---
 chunk_id: project_scanvista
-tags: [projects, scanvista, three.js, react, node.js, postgresql, ar, ai, qr, 3d, product-visualization]
-retrieval_triggers: ["ScanVista", "QR to 3D", "product visualization", "AR project", "Three.js project", "Garv's best project", "3D viewer", "model viewer"]
-summary: "ScanVista is a QR-to-3D product visualization platform built by Garv Jain as technical lead. Scanning a QR code launches a full 3D product viewer in the browser with AR support, bulk import, analytics, and an AI product intelligence layer."
+tags: [projects, scanvista, three.js, react, nodejs, postgresql, ar, ai, qr, 3d, product-visualization, analytics]
+retrieval_triggers: ["ScanVista", "QR to 3D", "product visualization", "AR project", "Three.js project", "React product viewer", "3D product visualization", "QR scanning app", "model-viewer", "AI product intelligence"]
+summary: "ScanVista is a QR-to-3D product visualization platform built by Garv Jain, with AR support, 3D viewer controls, analytics, AI product intelligence, and a full stack architecture led by technical ownership."
 ---
 
 # ScanVista

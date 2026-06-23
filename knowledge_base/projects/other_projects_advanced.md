@@ -1,8 +1,8 @@
 ---
 chunk_id: other_projects_advanced
-tags: [projects, experimental-systems, ai-applications, backend-systems, machine-learning, distributed-systems, computer-vision, fastapi, python, system-design-experiments]
-retrieval_triggers: ["advanced projects Garv", "experimental AI systems", "distributed systems experiments", "ScamShield tool", "SimonSays AI vision game", "typing sentiment analysis system", "keylogger research system", "LinkedUp terminal LinkedIn project"]
-summary: "Compressed inventory of experimental and advanced engineering systems spanning AI applications, distributed systems experiments, computer vision games, behavioral analytics, and backend prototypes."
+tags: [projects, advanced, experimental, ai, distributed-systems, computer-vision, research, prototypes, backend]
+retrieval_triggers: ["advanced projects Garv", "experimental systems", "AI prototypes", "distributed systems experiments", "computer vision project", "backend prototypes", "research systems", "tool experiments"]
+summary: "An inventory of Garv Jain's advanced experimental engineering projects: AI prototypes, distributed system experiments, computer vision tools, and other backend-focused research systems."
 ---
 
 # Advanced Engineering Systems Inventory

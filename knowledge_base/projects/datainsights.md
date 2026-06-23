@@ -1,8 +1,8 @@
 ---
 chunk_id: project_datainsights
-tags: [projects, datainsights, ai, data-platform, multi-tenant, saas, rag, ollama, compute-first, data-cleaning, duckdb]
-retrieval_triggers: ["DataInsights", "DataInsights.ai", "data platform project", "compute-first architecture", "AI data analysis tool", "multi-tenant SaaS", "data cleaning pipeline", "RAG chatbot project", "natural language data queries", "DataPort connectors"]
-summary: "DataInsights.ai is a multi-tenant AI data analysis platform built by Garv Jain, where employees query company datasets in natural language. Its core architectural rule is that the LLM never sees raw data — only a pre-computed structured report — with a 5-step cleaning pipeline and local Ollama models throughout."
+tags: [projects, datainsights, ai, data-platform, multi-tenant, saas, rag, ollama, compute-first, data-cleaning, duckdb, reports]
+retrieval_triggers: ["DataInsights", "DataInsights.ai", "AI data platform", "compute-first architecture", "RAG data analysis", "multi-tenant data app", "natural language data queries", "Ollama integration", "data cleaning pipeline"]
+summary: "DataInsights.ai is a multi-tenant AI analytics platform built by Garv Jain. It uses a compute-first architecture to keep raw data private, runs local Ollama models, and answers natural-language queries over structured business reports."
 ---
 
 # DataInsights.ai

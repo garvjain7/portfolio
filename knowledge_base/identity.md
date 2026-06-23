@@ -1,8 +1,8 @@
 ---
 chunk_id: identity_core
-tags: [identity, engineering_style, thinking, approach, profile]
-retrieval_triggers: ["who is Garv", "what kind of engineer", "how does Garv think", "Garv's approach", "describe Garv", "engineering style", "what makes Garv different"]
-summary: "Core identity and engineering profile of Garv Jain — thinking style, problem gravitation, design process, strengths, weaknesses, and motivation."
+tags: [identity, engineering_style, thinking, approach, profile, philosophy]
+retrieval_triggers: ["who is Garv", "what kind of engineer", "how does Garv think", "Garv's approach", "describe Garv", "engineering style", "what makes Garv different", "Garv's identity", "Garv's profile"]
+summary: "Garv Jain's core engineering identity — his thinking style, problem preferences, strengths, motivations, and how he approaches technical work."
 ---
 
 # Identity

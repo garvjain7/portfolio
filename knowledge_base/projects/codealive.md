@@ -1,8 +1,8 @@
 ---
 chunk_id: project_codealive
-tags: [projects, codealive, fastapi, postgresql, mongodb, redis, websockets, real-time, collaboration, code-editor, operational-transformation]
-retrieval_triggers: ["CodeAlive", "code snippet sharing", "real-time collaboration project", "Operational Transformation", "CodeMirror project", "collaborative editor", "Garv's most complex project"]
-summary: "CodeAlive is a code snippet sharing platform built by Garv Jain with anonymous and authenticated sharing, inline image embeds, password-protected snippets, and a from-scratch Operational Transformation engine for real-time collaboration."
+tags: [projects, codealive, fastapi, postgresql, mongodb, redis, websockets, real-time, collaboration, code-editor, operational-transformation, OT]
+retrieval_triggers: ["CodeAlive", "code collaboration", "real-time code editor", "collaborative editor", "Operational Transformation", "OT engine", "websocket collaboration", "sharing code snippets", "password protected snippets"]
+summary: "CodeAlive is a real-time collaborative code sharing platform built by Garv Jain. It combines a custom OT engine, FastAPI backend, PostgreSQL/MongoDB storage, Redis presence, and secure sharing workflows."
 ---
 
 # CodeAlive

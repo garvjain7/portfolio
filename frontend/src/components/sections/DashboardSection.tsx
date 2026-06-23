@@ -152,7 +152,7 @@ export function DashboardSection() {
               marginBottom: '0.3rem',
             }}
           >
-            Numbers don&apos; tell the full story.
+            Numbers don&apos;t tell the full story.
           </p>
           <p
             style={{

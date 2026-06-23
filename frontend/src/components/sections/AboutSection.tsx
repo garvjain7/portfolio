@@ -44,67 +44,12 @@ export function AboutSection() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1.6fr',
+          gridTemplateColumns: '1.6fr 1fr',
           gap: '4rem',
           alignItems: 'center',
         }}
       >
-        {/* Left — photo */}
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div
-            style={{
-              position: 'relative',
-              width: '260px',
-              height: '260px',
-            }}
-          >
-            {/* Accent ring */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: '-3px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, var(--accent), transparent 60%)',
-                zIndex: 0,
-              }}
-            />
-            <div
-              style={{
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                borderRadius: '50%',
-                background: 'var(--bg-elevated)',
-                border: '3px solid var(--bg-primary)',
-                overflow: 'hidden',
-                zIndex: 1,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              {/* Replace src with actual photo */}
-              <div
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  background: 'linear-gradient(135deg, var(--bg-elevated), var(--bg-surface))',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: '2.5rem',
-                  color: 'var(--accent)',
-                  fontWeight: 600,
-                }}
-              >
-                GJ
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right — content */}
+        {/* Left — content */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
           {/* Role tag */}
           <p
@@ -168,10 +113,11 @@ export function AboutSection() {
               maxWidth: '520px',
             }}
           >
-            Backend-focused engineer building systems that handle real complexity —
-            multi-tenant SaaS, AI pipelines, real-time collaboration, and data platforms.
-            RHCSA + RHCE certified. Currently technical lead on multiple concurrent projects
-            at Poornima Institute of Engineering and Technology.
+            Backend-focused systems builder and B.Tech CS candidate (2023–2027). 
+            RHCSA &amp; RHCE certified. Experienced as a Technical Lead across concurrent commercial 
+            projects at SparkIIT and STPI Jaipur. Specializes in designing robust multi-tenant 
+            SaaS architectures, RAG pipelines, and real-time collaboration engines. Highly motivated 
+            by system design tradeoffs and underlying mechanisms.
           </p>
 
           {/* Resume buttons */}
@@ -305,6 +251,71 @@ export function AboutSection() {
           >
             Not sure what to ask? Start with Garv&apos;s AI →
           </button>
+        </div>
+
+        {/* Right — photo */}
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div
+            style={{
+              position: 'relative',
+              width: '260px',
+              height: '260px',
+            }}
+          >
+            {/* Accent ring */}
+            <div
+              style={{
+                position: 'absolute',
+                inset: '-3px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, var(--accent), transparent 60%)',
+                zIndex: 0,
+              }}
+            />
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                border: '3px solid var(--bg-primary)',
+                overflow: 'hidden',
+                zIndex: 1,
+              }}
+            >
+              {/* Drop profile.jpg into frontend/public/ to use your photo */}
+              <img
+                src="/profile.jpeg"
+                alt="Garv Jain"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center top',
+                  display: 'block',
+                }}
+                onError={(e) => {
+                  // Fallback while photo isn't added yet
+                  const el = e.currentTarget
+                  el.style.display = 'none'
+                  const parent = el.parentElement as HTMLElement
+                  parent.style.background = 'linear-gradient(135deg, var(--bg-elevated), var(--bg-surface))'
+                  parent.style.display = 'flex'
+                  parent.style.alignItems = 'center'
+                  parent.style.justifyContent = 'center'
+                  const fallback = document.createElement('span')
+                  fallback.textContent = 'GJ'
+                  fallback.style.cssText = `
+                    font-family: var(--font-mono);
+                    font-size: 2.5rem;
+                    color: var(--accent);
+                    font-weight: 600;
+                  `
+                  parent.appendChild(fallback)
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

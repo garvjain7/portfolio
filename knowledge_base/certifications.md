@@ -1,8 +1,8 @@
 ---
 chunk_id: certifications_core
-tags: [certifications, credentials, achievements, RHCSA, RHCE, Databricks, NPTEL]
-retrieval_triggers: ["Garv's certifications", "Garv's credentials", "RHCSA", "RHCE", "Databricks", "Red Hat", "NPTEL", "certified", "qualifications"]
-summary: "Garv Jain's certifications — RHCSA, RHCE (in progress), Databricks Data Engineer Associate, 7 NPTEL certifications, and additional credentials across workshops, hackathons, and internships."
+tags: [certifications, credentials, achievements, RHCSA, RHCE, Databricks, NPTEL, training, Linux, data-engineering]
+retrieval_triggers: ["Garv's certifications", "Garv's credentials", "Red Hat certification", "RHCSA", "RHCE", "Databricks Data Engineer", "NPTEL certifications", "technical certifications", "certification list", "training and credentials", "qualified certifications"]
+summary: "Garv Jain's formal credentials — RHCSA, RHCE in progress, Databricks Data Engineer Associate, NPTEL courses, and other professional certifications that support his backend, data, and Linux skill profile."
 ---
 
 # Certifications

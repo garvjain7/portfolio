@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/navbar/Navbar'
-import { WelcomeScreen } from '@/components/overlays/WelcomeScreen'
+import { Workspace } from '@/components/workspace/Workspace'
+import { WorkspaceHero } from '@/components/workspace/WorkspaceHero'
 import { ResumeOverlay } from '@/components/overlays/ResumeOverlay'
 import { ProjectOverlay } from '@/components/overlays/ProjectOverlay'
 import { AssistantPanel } from '@/components/assistant/AssistantPanel'
@@ -16,7 +17,6 @@ export default function Home() {
   return (
     <>
       {/* Overlays + panels — rendered above everything */}
-      <WelcomeScreen />
       <AssistantPanel />
       <ResumeOverlay />
       <ProjectOverlay />
@@ -24,30 +24,10 @@ export default function Home() {
       {/* Navbar — pins after workspace scroll */}
       <Navbar />
 
-      {/* Workspace hero placeholder — built separately */}
-      <div
-        id="workspace-hero"
-        style={{
-          height: '100vh',
-          background: 'var(--bg-primary)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          position: 'relative',
-        }}
-      >
-        <p
-          style={{
-            fontFamily: 'var(--font-mono)',
-            fontSize: '0.8rem',
-            color: 'var(--text-muted)',
-            letterSpacing: '0.1em',
-          }}
-        >
-          {/* Workspace 3D scene goes here */}
-          workspace_hero.tsx
-        </p>
-      </div>
+      {/* Coordinated intro sequence and video hero */}
+      <Workspace>
+        <WorkspaceHero />
+      </Workspace>
 
       {/* Main content — all scroll sections */}
       <main>

@@ -14,6 +14,9 @@ from openai import AsyncOpenAI
 
 from core.config import settings
 from services.embeddings import embed_query
+from services.loader import load_chunks_for_files
+from services.router_service import route_files
+from services.chunk_cache import get_chunk_embeddings
 from services.retriever import retriever
 from models.chat import ChatMessage
 
@@ -239,10 +242,24 @@ async def stream_answer(
     # 1. Embed the user query
     query_embedding = embed_query(query)
 
-    # 2. Retrieve top-k relevant chunks from FAISS
-    retrieved_chunks = retriever.search(query_embedding)
+    # 2. Route the query to the most relevant files
+    selected_files = route_files(
+        query,
+        query_embedding,
+        retriever.file_metadata,
+        retriever.file_embeddings,
+    )
 
-    # 3. Build the context block
+    # 3. Load only the selected files and split them into chunks
+    chunks = load_chunks_for_files(selected_files)
+
+    # 4. Embed chunks using a TTL cache for repeated queries
+    chunk_embeddings = get_chunk_embeddings(chunks)
+
+    # 5. Retrieve top-k chunks from the routed subset
+    retrieved_chunks = retriever.search_chunks(query_embedding, chunks, chunk_embeddings)
+
+    # 6. Build the context block
     context = _build_context(retrieved_chunks)
 
     # 4. Assemble messages
