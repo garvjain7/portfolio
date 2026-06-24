@@ -22,7 +22,7 @@ export function ProjectOverlay() {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', handleKey)
     }
-  }, [activeProjectId])
+  }, [activeProjectId, closeProject])
 
   if (!activeProjectId || !project) return null
 

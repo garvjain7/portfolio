@@ -1,4 +1,3 @@
-```md
 # Garv Jain — Engineering Portfolio
 
 An interactive, AI-powered engineering portfolio designed as a **workspace-like system interface**, showcasing full-stack, AI, distributed systems, and agent-based applications built by Garv Jain.
@@ -196,4 +195,3 @@ This system is continuously evolving. Architecture decisions are intentionally d
 - clarity over complexity
 - modular knowledge representation
 - AI-grounded interaction over static documentation
-```

@@ -5,7 +5,7 @@ Used at startup to embed all knowledge base chunks, and at query time
 to embed the user's question before FAISS search.
 
 NOTE: Embeddings use local sentence-transformers model, NOT OpenAI.
-OpenAI is used only for the LLM chat part (gpt-4o).
+Gemini is used only for the LLM chat part.
 """
 
 from sentence_transformers import SentenceTransformer

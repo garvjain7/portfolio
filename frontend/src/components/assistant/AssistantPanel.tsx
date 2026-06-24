@@ -26,7 +26,7 @@ export function AssistantPanel() {
     if (!assistantOpen) {
       prefillHandled.current = false
     }
-  }, [assistantOpen, prefillQuery])
+  }, [assistantOpen, prefillQuery, sendMessage])
 
   // Close on escape
   useEffect(() => {

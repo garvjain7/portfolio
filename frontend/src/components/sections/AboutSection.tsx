@@ -1,8 +1,8 @@
 'use client'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { ROTATING_ROLES, SOCIAL_LINKS } from '@/lib/constants'
 import { useUIStore } from '@/stores/uiStore'
-import { Button } from '@/components/ui/button'
 
 const GITHUB_ICON = (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -284,9 +284,11 @@ export function AboutSection() {
               }}
             >
               {/* Drop profile.jpg into frontend/public/ to use your photo */}
-              <img
+              <Image
                 src="/profile.jpeg"
                 alt="Garv Jain"
+                width={260}
+                height={260}
                 style={{
                   width: '100%',
                   height: '100%',
@@ -296,7 +298,7 @@ export function AboutSection() {
                 }}
                 onError={(e) => {
                   // Fallback while photo isn't added yet
-                  const el = e.currentTarget
+                  const el = e.currentTarget as HTMLElement
                   el.style.display = 'none'
                   const parent = el.parentElement as HTMLElement
                   parent.style.background = 'linear-gradient(135deg, var(--bg-elevated), var(--bg-surface))'

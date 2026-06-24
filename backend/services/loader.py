@@ -1,5 +1,7 @@
 """
-loader.py — Knowledge base loading with two distinct responsibilities.
+loader.py — Knowledge base loading with direct recursive chunking.
+
+Two distinct responsibilities:
 
 load_file_metadata()      — called ONCE at startup
                             reads only frontmatter from all .md files
@@ -7,36 +9,29 @@ load_file_metadata()      — called ONCE at startup
                             does NOT read or parse file bodies
 
 load_chunks_for_files()   — called PER QUERY, for selected files only
-                            reads and chunks only the files the router selected
+                            reads only selected files
+                            applies RecursiveCharacterTextSplitter directly
+                            preserves markdown structure via separator hierarchy
+                            preserves metadata on every chunk
                             returns chunk dicts ready for embedding + retrieval
 
-The old load_documents() (chunk everything at startup) is intentionally
-removed. All chunking happens at query time, on selected files only.
+Strategy:
+  RecursiveCharacterTextSplitter respects markdown structure via separators:
+  1. "\n\n" (paragraph breaks) — Splits at headers and blank lines
+  2. "\n" (line breaks) — Preserves line-level context
+  3. " " (word boundaries) — Last resort
+  4. "" (character) — Never reached in practice
+  
+Result: Chunks split at semantic boundaries (paragraphs, headers), NOT arbitrary points.
+Eliminates the 70-chunk explosion from H2 pre-splitting.
 """
 
 from pathlib import Path
 from typing import Any
 import frontmatter
-import re
 
 from core.config import settings
-
-
-def _split_by_h2(body: str) -> list[str]:
-    """
-    Split a markdown body on ## headings. Returns non-empty sections.
-    Each section re-attaches its ## prefix so it reads as a self-contained chunk.
-    """
-    sections = re.split(r"(?m)^## ", body)
-    result = []
-    for i, section in enumerate(sections):
-        text = section.strip()
-        if not text:
-            continue
-        if i > 0:
-            text = "## " + text
-        result.append(text)
-    return result
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 
 def load_file_metadata() -> list[dict[str, Any]]:
@@ -88,21 +83,35 @@ def load_chunks_for_files(file_paths: list[Path]) -> list[dict[str, Any]]:
     """
     Read and chunk only the selected files. Called at query time.
 
+    Strategy:
+      1. Load file and frontmatter
+      2. Apply RecursiveCharacterTextSplitter with smart separators
+      3. Preserve markdown structure via separator hierarchy
+      4. Preserve metadata on every chunk
+
     Each chunk dict:
         {
-            "content":  str,           # one ## section (or full body if no ## headings)
+            "content":  str,           # chunk text (respects markdown boundaries)
             "metadata": {
                 "source":             str,   # relative path from KB root
-                "chunk_id":           str,   # from frontmatter
+                "chunk_id":           str,   # from frontmatter (file-level)
                 "tags":               list,
                 "summary":            str,   # file-level summary
                 "retrieval_triggers": list,
-                "section":            str,   # the ## heading for this specific chunk
+                "chunk_index":        int,   # sequence within file (0, 1, 2, ...)
             }
         }
     """
     kb_dir = settings.knowledge_base_dir
     chunks: list[dict[str, Any]] = []
+
+    # Initialize recursive splitter with smart separators
+    # Respects markdown structure: splits at paragraphs first, then lines, then words
+    recursive_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=settings.chunk_size,
+        chunk_overlap=settings.chunk_overlap,
+        separators=["\n\n", "\n", " ", ""],  # Paragraph → line → word → char
+    )
 
     for raw_path in file_paths:
         # Resolve to absolute path — file_paths may come as relative or absolute
@@ -124,6 +133,7 @@ def load_chunks_for_files(file_paths: list[Path]) -> list[dict[str, Any]]:
         meta = post.metadata
         relative_source = str(md_path.relative_to(kb_dir))
 
+        # Base metadata preserved on every chunk
         base_meta = {
             "source": relative_source,
             "chunk_id": meta.get("chunk_id", md_path.stem),
@@ -132,24 +142,19 @@ def load_chunks_for_files(file_paths: list[Path]) -> list[dict[str, Any]]:
             "retrieval_triggers": meta.get("retrieval_triggers", []),
         }
 
-        sections = _split_by_h2(body)
+        # Apply recursive chunking directly (respects markdown via separators)
+        if body.strip():
+            chunk_texts = recursive_splitter.split_text(body)
 
-        if not sections:
-            # No ## headings — treat whole body as one chunk
-            if body.strip():
+            for chunk_index, chunk_text in enumerate(chunk_texts):
                 chunks.append({
-                    "content": body.strip(),
-                    "metadata": {**base_meta, "section": ""},
+                    "content": chunk_text,
+                    "metadata": {
+                        **base_meta,
+                        "chunk_index": chunk_index,
+                    },
                 })
-            continue
-
-        for section_text in sections:
-            first_line = section_text.splitlines()[0] if section_text else ""
-            heading = first_line.lstrip("#").strip()
-            chunks.append({
-                "content": section_text,
-                "metadata": {**base_meta, "section": heading},
-            })
 
     print(f"[loader] Loaded {len(chunks)} chunks from {len(file_paths)} selected file(s).")
     return chunks
+
